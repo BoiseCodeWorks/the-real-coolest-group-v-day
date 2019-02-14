@@ -16,6 +16,7 @@ export default class ValController {
   constructor() {
     console.log('controller working')
     _valService.addSubscriber("valentines", draw)
+    draw()
   }
   addVal(event) {
     event.preventDefault()

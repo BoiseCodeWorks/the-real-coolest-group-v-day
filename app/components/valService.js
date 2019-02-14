@@ -1,12 +1,21 @@
 import Val from "../models/val.js";
 
 let _state = {
+  /**
+   * @type {Array<Val>}
+   */
+  valentines: [new Val({ to: 'you', from: 'devteam', message: 'something nice' })]
+}
+
+
+let _subscribers = {
+  /**
+   * @type {Array<() => {}>}
+   */
   valentines: []
 }
 
-let _subscribers = {
-  valentines: []
-}
+
 
 function setState(prop, data) {
   _state[prop] = data
