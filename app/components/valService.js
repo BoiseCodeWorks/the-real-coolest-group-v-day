@@ -21,7 +21,12 @@ export default class ValService {
   constructor() {
     console.log('services working')
   }
-  addVal(val) {
-
+  addVal(rawVal) {
+    let valentine = new Val(rawVal)
+    let updatedArr = [..._state.valentines, valentine]
+    setState('valentines', updatedArr)
+  }
+  get Valentines() {
+    return _state.valentines
   }
 }

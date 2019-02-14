@@ -3,7 +3,12 @@ import ValService from "./valService.js";
 let _valService = new ValService
 
 function draw() {
-
+  let template = ''
+  let valentines = _valService.Valentines
+  for (let i = 0; i < valentines.length; i++) {
+    template += valentines[i].getTemplate()
+  }
+  document.getElementById('cards').innerHTML = template
 }
 
 
